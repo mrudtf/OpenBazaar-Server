@@ -1,49 +1,34 @@
-# OpenBazaar Server
-[![Build Status](https://travis-ci.org/OpenBazaar/OpenBazaar-Server.svg?branch=master)](https://travis-ci.org/OpenBazaar/OpenBazaar-Server) [![Coverage Status](https://coveralls.io/repos/OpenBazaar/OpenBazaar-Server/badge.svg?branch=master&service=github)](https://coveralls.io/github/OpenBazaar/OpenBazaar-Server?branch=master) [![Slack Status](https://openbazaar-slackin-drwasho.herokuapp.com/badge.svg)](https://openbazaar-slackin-drwasho.herokuapp.com)
+# OpenBazaar + Zeronet
 
-This repo contains the OpenBazaar networking daemon that can be used to access the p2p network. It establishes connections and maintains
-a Kademlia style DHT. Rest and websocket APIs are available for clients to communicate with the daemon.
+We are actively working to add OpenBazaar in [Zeronet](https://github.com/HelloZeroNet/ZeroNet).
 
-## Install
+## Reclaiming Darkmarket Project
 
-Pre-built installers which bundle the client and server components can be found [here](https://github.com/OpenBazaar/OpenBazaar-Installer/releases).
+[Darkmarket](https://www.youtube.com/watch?v=lHVqH8XO1Pk#t=86)
 
-To install just this server:
-```bash
-pip install -r requirements.txt
-```
+The original project share a vision of a community based uncensored freemarket. Openbazaar team fork the original project and after getting a [fund](https://blog.openbazaar.org/openbazaar-is-entering-a-new-phase-with-funding/) they seemed to missed the point. Openbazaar does not share the same vision and after mainnet version was released the only thing they share is disappointment among the bitcoin and opensource [communities](https://www.reddit.com/r/Buttcoin/comments/4f18b5/openbizarre_developer_gets_very_sad_locks_grammar/). It is [clearly] (https://www.youtube.com/watch?v=NXszuDQwGHw) that privacy and anonymization its not projects priority and the whole project was build in a protocol (rudp) that does not support tor or any other anonymization utilities. A freemarket cannot exist with a visible ip and indentities/activities easily associated with personnal info.
 
-Depending on your system configuration you may need to install some additional dependencies. You can find more detailed, OS specific, instructions [here](https://slack-files.com/T02FPGBKB-F0KJU1CLX-cbbcf8a02c).
+This projects aims to reclaim a community based project driven by community needs.
 
-## Usage
+###Zeronet vs Openbazaar
 
-```bash
-python openbazaard.py start --help
-```
+*  Network stability / Not stable yet 
+*  Offers anonymity via tor hidden services / Ip is not hidden
+*  Seeding shop/pages(no single point of failure) / If you close app your store goes offline (ipfs still in pre-alpha)
+*  Running offline (browsing) / Running only with internet connection
 
-```
-usage: python openbazaard.py start [<args>]
+###Donation
 
-Start the OpenBazaar server
+Sorry we missed the 1 M funding. Support this project:
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -d, --daemon          run the server in the background as a daemon
-  -t, --testnet         use the test network
-  -l LOGLEVEL, --loglevel LOGLEVEL
-                        set the logging level [debug, info, warning, error,
-                        critical]
-  -p PORT, --port PORT  set the network port
-  -a ALLOWIP, --allowip ALLOWIP
-                        only allow api connections from this ip
-  -r RESTAPIPORT, --restapiport RESTAPIPORT
-                        set the rest api port
-  -w WEBSOCKETPORT, --websocketport WEBSOCKETPORT
-                        set the websocket api port
-  -b HEARTBEATPORT, --heartbeatport HEARTBEATPORT
-                        set the heartbeat port
-  --pidfile PIDFILE     name of the pid file
-```
+Bitcoin address 182ADPcoAsLHowUUAMkmfChDSvnmXkE7tW
 
 ## License
-OpenBazaar Server is licensed under the [MIT License](LICENSE).
+
+
+
+>"Privacy: I know who you are, I don't know what you do. Anonymity: I know what you do, I don't know who you are. Don't confuse these two!"
+>
+> -- <cite>klaus j zimmermann</cite>
+
+...but we want both.
